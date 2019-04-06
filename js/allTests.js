@@ -20,7 +20,7 @@ suite(function (env) {
             await browser.get('http://the-internet.herokuapp.com/challenging_dom')
         });
     
-        after(() => browser.quit());
+        after(async () => browser.quit());
     
         it('should load', function (done) {
             expect(browser.getTitle()).to.eventually.equal('The Internet').notify(done);
